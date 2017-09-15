@@ -20,7 +20,7 @@ public class MessageManager {
     }
 
     public void setup() {
-        prefix.put(PrefixType.MAIN, ChatColor.AQUA + "" + ChatColor.BOLD + "[" + ChatColor.RED + "UHCMeetup" + ChatColor.AQUA + "" + ChatColor.BOLD + "]");
+        prefix.put(PrefixType.MAIN, ChatColor.AQUA + "" + ChatColor.BOLD + "[" + ChatColor.RED + "Curse" + ChatColor.AQUA + "" + ChatColor.BOLD + "]");
         prefix.put(PrefixType.ARROW, ChatColor.DARK_GRAY + "»");
         prefix.put(PrefixType.PERMISSIONS, ChatColor.RED + "Permissions" + " " + ChatColor.DARK_GRAY + "»");
     }
