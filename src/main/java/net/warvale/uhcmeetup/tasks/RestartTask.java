@@ -29,7 +29,7 @@ public class RestartTask extends BukkitRunnable {
     }
 
     private void broadcastShutdown(int seconds) {
-        Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.GOLD + "Server restarting in " + seconds + " seconds!");
+        Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + "Server restarting in " + seconds + " seconds!");
         SoundUtils.playSound(Sound.NOTE_STICKS);
     }
 
