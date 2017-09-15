@@ -75,11 +75,13 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
         this.processLeave(e.getPlayer());
+        e.setQuitMessage(null);
     }
 
     @EventHandler
     public void onKick(PlayerKickEvent e) {
         this.processLeave(e.getPlayer());
+        e.setLeaveMessage(null);
     }
 
     private void processLeave(Player player) {
