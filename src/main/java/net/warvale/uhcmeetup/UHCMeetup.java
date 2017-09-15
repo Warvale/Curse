@@ -107,6 +107,10 @@ public class UHCMeetup extends JavaPlugin {
     }
 
     private void initLobby() {
+
+        //fail safe
+        FileUtils.deleteDirectory(new File("lobby"));
+
         //load the lobby schematic, and create the lobby world
         this.lobbySchematic = new File(this.getDataFolder(), "minigamelobby.schematic");
         if (!lobbySchematic.exists()) {
