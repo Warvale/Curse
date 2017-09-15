@@ -1,7 +1,7 @@
 name: UHCMeetup
 main: net.warvale.uhcmeetup.UHCMeetup
 version: 1.0.0
-depend: [WorldBorder]
+depend: [WorldBorder, CleanroomGenerator, WorldEdit]
 softdepend: [Multiverse-Core]
 commands:
   forcestart:
