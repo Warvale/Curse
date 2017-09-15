@@ -1,0 +1,14 @@
+name: UHCMeetup
+main: net.warvale.uhcmeetup.UHCMeetup
+version: 1.0.0
+depend: [WorldBorder]
+softdepend: [Multiverse-Core]
+commands:
+  forcestart:
+    description: Force starts a game
+    default: op
+  vanish:
+    description: vanish yourself or another player
+    default: op
+  mod:
+    description: allows a mod to mod themselfs
