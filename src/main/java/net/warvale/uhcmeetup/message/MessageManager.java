@@ -20,9 +20,9 @@ public class MessageManager {
     }
 
     public void setup() {
-        prefix.put(PrefixType.MAIN, ChatColor.GOLD + "" + ChatColor.BOLD + "[" + ChatColor.DARK_AQUA + "UHCMeetup" + ChatColor.GOLD + "" + ChatColor.BOLD + "]");
+        prefix.put(PrefixType.MAIN, ChatColor.AQUA + "" + ChatColor.BOLD + "[" + ChatColor.RED + "UHCMeetup" + ChatColor.AQUA + "" + ChatColor.BOLD + "]");
         prefix.put(PrefixType.ARROW, ChatColor.DARK_GRAY + "»");
-        prefix.put(PrefixType.PERMISSIONS, ChatColor.GOLD + "Permissions" + " " + ChatColor.DARK_GRAY + "»");
+        prefix.put(PrefixType.PERMISSIONS, ChatColor.RED + "Permissions" + " " + ChatColor.DARK_GRAY + "»");
     }
 
     public static String getPrefix(PrefixType type) {
