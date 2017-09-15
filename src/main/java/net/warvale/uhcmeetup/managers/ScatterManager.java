@@ -36,7 +36,7 @@ public class ScatterManager {
     public void startScatter(CommandSender sender) {
         //update game state
         UHCMeetup.getGame().setState(GameState.STARTING);
-        sender.sendMessage(ChatColor.GREEN + "Starting UHCMeetup Game...");
+        sender.sendMessage(ChatColor.RED + "Starting UHCMeetup Game...");
 
         for (MeetupPlayer meetupPlayer : PlayerManager.getInstance().getMeetupPlayers().values()) {
             if (meetupPlayer == null || meetupPlayer.getState().equals(MeetupPlayer.State.MOD)) continue;
@@ -175,8 +175,8 @@ public class ScatterManager {
 
                     UHCMeetup.getGame().setState(GameState.INGAME);
                     new GameTask().runTaskTimer(UHCMeetup.getInstance(), 20, 20);
-                    Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.GOLD + "The game has started!");
-                    Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.GOLD + "The border will shrink in 3 minutes!");
+                    Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + "The game has started!");
+                    Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + "The border will shrink in 3 minutes!");
                 }
             }
 
@@ -185,7 +185,7 @@ public class ScatterManager {
     }
 
     public void broadcastStartMessage(int seconds) {
-        Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.GOLD + "Starting in " + ChatColor.AQUA + seconds + ChatColor.GOLD + " seconds!");
+        Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + "Starting in " + ChatColor.AQUA + seconds + ChatColor.RED + " seconds!");
         SoundUtils.playSound(Sound.NOTE_STICKS);
     }
 

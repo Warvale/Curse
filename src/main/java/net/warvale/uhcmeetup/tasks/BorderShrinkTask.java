@@ -18,25 +18,25 @@ public class BorderShrinkTask extends BukkitRunnable {
     public void run() {
         --this.i;
         if (this.i >= 1) {
-            MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.GOLD + "Border shrinking in " +  this.i + " seconds!");
+            MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.RED + "Border shrinking in " +  this.i + " seconds!");
             SoundUtils.playSound(Sound.NOTE_STICKS);
         } else if (this.i == 0) {
             if (UHCMeetup.getGame().getCurrentBorder() == 125) {
                 UHCMeetup.getGame().setCurrentBorder(75);
                 BorderUtils.shrinkBorder(UHCMeetup.getGame().getCurrentBorder(), this);
-                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.GOLD + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
+                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.RED + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
             } else if (UHCMeetup.getGame().getCurrentBorder() == 75) {
                 UHCMeetup.getGame().setCurrentBorder(45);
                 BorderUtils.shrinkBorder(UHCMeetup.getGame().getCurrentBorder(), this);
-                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.GOLD + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
+                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.RED + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
             } else if (UHCMeetup.getGame().getCurrentBorder() == 45) {
                 UHCMeetup.getGame().setCurrentBorder(25);
                 BorderUtils.shrinkBorder(UHCMeetup.getGame().getCurrentBorder(), this);
-                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.GOLD + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
+                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.RED + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
             } else if (UHCMeetup.getGame().getCurrentBorder() == 25) {
                 UHCMeetup.getGame().setCurrentBorder(10);
                 BorderUtils.shrinkBorder(UHCMeetup.getGame().getCurrentBorder(), this);
-                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.GOLD + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
+                MessageManager.broadcast(MessageManager.getPrefix(PrefixType.MAIN) + ChatColor.RED + "The world border has shrunk to " + UHCMeetup.getGame().getCurrentBorder()  + "x" + UHCMeetup.getGame().getCurrentBorder());
             }
         }
     }

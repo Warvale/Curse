@@ -13,7 +13,7 @@ public class GameTask extends BukkitRunnable {
 
     private int seconds = 0;
     private int shrinkTime = UHCMeetup.getGame().getShrinkTime() * 60;
-    private String ffaWin = ChatColor.GOLD + "Congratulations to %player% for winning the UHC Meetup!";
+    private String ffaWin = ChatColor.RED + "Congratulations to %player% for winning the UHC Meetup!";
 
     public void run() {
         seconds++;
