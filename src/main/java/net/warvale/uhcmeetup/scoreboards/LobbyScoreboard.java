@@ -33,26 +33,26 @@ public class LobbyScoreboard {
             ScoreboardManager scoreboardManager = Bukkit.getScoreboardManager();
             Scoreboard scoreboard = scoreboardManager.getNewScoreboard();
             Objective objective = scoreboard.registerNewObjective("lobby", "dummy");
-            objective.setDisplayName(ChatColor.DARK_GRAY + "» " + ChatColor.DARK_AQUA + "UHC Meetup" + ChatColor.DARK_GRAY + " «");
+            objective.setDisplayName(ChatColor.DARK_GRAY + "» " + ChatColor.RED + "UHC Meetup" + ChatColor.DARK_GRAY + " «");
             objective.setDisplaySlot(DisplaySlot.SIDEBAR);
 
             objective.getScore("   ").setScore(6);
 
             Team gameMode = scoreboard.registerNewTeam("GameMode");
-            gameMode.addEntry(ChatColor.GREEN + "Mode: ");
+            gameMode.addEntry(ChatColor.AQUA + "Mode: ");
             gameMode.setSuffix(ChatColor.WHITE + UHCMeetup.getGame().getType().toString());
-            objective.getScore(ChatColor.GREEN + "Mode: ").setScore(5);
+            objective.getScore(ChatColor.AQUA + "Mode: ").setScore(5);
 
             objective.getScore("  ").setScore(4);
 
             Team online = scoreboard.registerNewTeam("PlayersOnline");
-            online.addEntry(ChatColor.GREEN + "Players: ");
+            online.addEntry(ChatColor.AQUA + "Players: ");
             online.setSuffix(ChatColor.WHITE + String.valueOf(Bukkit.getServer().getOnlinePlayers().size()) + ChatColor.GRAY + "/"
                     + ChatColor.WHITE + String.valueOf(UHCMeetup.getGame().getMaxPlayers()));
-            objective.getScore(ChatColor.GREEN + "Players: ").setScore(3);
+            objective.getScore(ChatColor.AQUA + "Players: ").setScore(3);
 
             objective.getScore(" ").setScore(2);
-            objective.getScore(ChatColor.GREEN + "warvale.net").setScore(1);
+            objective.getScore(ChatColor.RED + "warvale.net").setScore(1);
 
             this.scoreboards.put(player, scoreboard);
             player.setScoreboard(this.scoreboards.get(player));
