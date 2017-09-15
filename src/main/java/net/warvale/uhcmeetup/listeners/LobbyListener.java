@@ -10,6 +10,7 @@ import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 import net.warvale.uhcmeetup.UHCMeetup;
 import net.warvale.uhcmeetup.managers.GameState;
@@ -87,6 +88,13 @@ public class LobbyListener implements Listener {
         }
 
         e.setCancelled(true);
+    }
+
+    public void onPlayerMove(PlayerMoveEvent e) {
+        if (UHCMeetup.getGame().isState(GameState.LOBBY) && e.getTo().getBlockY() < 0) {
+            e.getPlayer().teleport(UHCMeetup.getInstance().getLobby().getLoc());
+        }
+
     }
 
 }

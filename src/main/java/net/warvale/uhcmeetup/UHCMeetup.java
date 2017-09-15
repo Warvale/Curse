@@ -38,6 +38,7 @@ public class UHCMeetup extends JavaPlugin {
     private File lobbySchematic;
     private Lobby lobby;
 
+
     @Override
     public void onEnable() {
         UHCMeetup.instance = this;
