@@ -115,7 +115,7 @@ public class GameManager {
     }
 
     public void startBorderShrink() {
-        Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.GOLD + "The border will now shrink every " + this.shrinkTime + " minutes until 10x10!");
+        Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + "The border will now shrink every " + this.shrinkTime + " minutes until 10x10!");
         new BorderRunnable().runTaskTimerAsynchronously(UHCMeetup.getInstance(), this.shrinkTime * 20, this.shrinkTime * 20);
     }
 
