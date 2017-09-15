@@ -34,7 +34,7 @@ public class UHCMeetup extends JavaPlugin {
 
     private WorldManager worldManager;
     private static GameManager gameManager;
-    public final static String PREFIX = ChatColor.AQUA + "" + ChatColor.BOLD + "[" + ChatColor.RED + "UHCMeetup" + ChatColor.AQUA + "" + ChatColor.BOLD + "] ";
+    public final static String PREFIX = ChatColor.AQUA + "" + ChatColor.BOLD + "[" + ChatColor.RED + "Curse" + ChatColor.AQUA + "" + ChatColor.BOLD + "] ";
     private File lobbySchematic;
     private Lobby lobby;
 
