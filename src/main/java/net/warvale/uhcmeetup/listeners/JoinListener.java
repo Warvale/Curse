@@ -51,7 +51,7 @@ public class JoinListener implements Listener {
 
             int minPlayers = UHCMeetup.getGame().getMinPlayers() - Bukkit.getServer().getOnlinePlayers().size();
             SoundUtils.playSound(Sound.NOTE_STICKS);
-            Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + String.valueOf(minPlayers) + ChatColor.DARK_GREEN + " more players needed to start the game!");
+            Bukkit.broadcastMessage(UHCMeetup.PREFIX + ChatColor.RED + String.valueOf(minPlayers) + ChatColor.AQUA + " more players needed to start the game!");
 
             if (!PlayerManager.getInstance().doesMeetupPlayerExsists(player.getUniqueId())) {
                 PlayerManager.getInstance().createMeetupPlayer(player.getUniqueId(), MeetupPlayer.State.PLAYER);
