@@ -25,6 +25,7 @@ import net.warvale.uhcmeetup.managers.WorldManager;
 import net.warvale.uhcmeetup.utils.FileUtils;
 import net.warvale.uhcmeetup.world.UHCMeetupWorldGenerator;
 import io.nv.bukkit.CleanroomGenerator.CleanroomChunkGenerator;
+import org.bukkit.scoreboard.ScoreboardManager;
 
 import java.io.File;
 
@@ -66,6 +67,7 @@ public class UHCMeetup extends JavaPlugin {
 
         //initialize the lobby
         this.initLobby();
+
 
         //being world generation
         new UHCMeetupWorldGenerator().runTaskTimer(this, 20L, 20L);
