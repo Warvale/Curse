@@ -74,7 +74,7 @@ public class VanishCommand implements CommandExecutor {
 
         player.setAllowFlight(true);
         player.setFlying(true);
-        player.setGameMode(GameMode.CREATIVE);
+        player.setGameMode(GameMode.SPECTATOR);
         player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, Integer.MAX_VALUE, 0));
     }
 
