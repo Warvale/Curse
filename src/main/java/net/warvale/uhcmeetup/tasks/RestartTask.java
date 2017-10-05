@@ -22,16 +22,19 @@ public class RestartTask extends BukkitRunnable {
 
             if (countdown <= 10) {
                 this.broadcastShutdown(countdown);
+                if (countdown <= 3) {
+                    for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+                        ByteArrayDataOutput out = ByteStreams.newDataOutput();
+                        out.writeUTF("Connect");
+                        out.writeUTF("lobby");
+
+                        player.sendPluginMessage(UHCMeetup.getInstance(), "BungeeCord", out.toByteArray());
+                    }
+                }
             }
 
         } else {
-            for (Player player : Bukkit.getServer().getOnlinePlayers()) {
-                ByteArrayDataOutput out = ByteStreams.newDataOutput();
-                out.writeUTF("Connect");
-                out.writeUTF("lobby");
 
-                player.sendPluginMessage(UHCMeetup.getInstance(), "BungeeCord", out.toByteArray());
-            }
 
             this.cancel();
             UHCMeetup.getInstance().getServer().shutdown();
