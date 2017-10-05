@@ -1,8 +1,9 @@
 package net.warvale.uhcmeetup.utils;
 
+import net.minecraft.server.v1_8_R3.BiomeBase;
 import org.bukkit.block.Biome;
-import net.minecraft.server.v1_7_R4.BiomeBase;
-import org.bukkit.craftbukkit.v1_7_R4.block.CraftBlock;
+import org.bukkit.craftbukkit.v1_8_R3.block.CraftBlock;
+
 
 public class BiomeUtils {
 

@@ -1,8 +1,11 @@
 package net.warvale.uhcmeetup.tasks;
 
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import net.warvale.uhcmeetup.UHCMeetup;
 import net.warvale.uhcmeetup.utils.SoundUtils;
@@ -22,6 +25,14 @@ public class RestartTask extends BukkitRunnable {
             }
 
         } else {
+            for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+                ByteArrayDataOutput out = ByteStreams.newDataOutput();
+                out.writeUTF("Connect");
+                out.writeUTF("lobby");
+
+                player.sendPluginMessage(UHCMeetup.getInstance(), "BungeeCord", out.toByteArray());
+            }
+
             this.cancel();
             UHCMeetup.getInstance().getServer().shutdown();
         }
